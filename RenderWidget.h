@@ -30,6 +30,8 @@ protected slots:
   void zoomIn();
   void zoomOut();
   void rotateAboutY();
+  void rotateAboutX();
+
 
 protected:
   void initializeGL() override;

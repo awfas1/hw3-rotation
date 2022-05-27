@@ -111,6 +111,21 @@ void RenderWidget::rotateAboutY()
   update();
 }
 
+void RenderWidget::rotateAboutX()
+{
+    double angle = 5.0 / 180 * M_PI;
+
+    std::cout << "Rotating about x by " << angle << "\n";
+
+    double newy = m_ViewPoint.y * cos(angle) - m_ViewPoint.z * sin(angle);
+    double newz = m_ViewPoint.y * sin(angle) + m_ViewPoint.z * cos(angle);
+
+    m_ViewPoint.y = newy;
+    m_ViewPoint.z = newz;
+
+    update();
+}
+
 
 void RenderWidget::drawCube(void)
 {
